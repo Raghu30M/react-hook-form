@@ -10,6 +10,7 @@ function App() {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm();
 
@@ -30,6 +31,7 @@ function App() {
                                 ...prevFormDataArray,
                                 data,
                             ]);
+                             reset();
                             console.log(formData);
                         })}
                     >
